@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IPOO/Clase 1.md",
+                "file": "BASES DE DATOS/TP BDD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Clase 1"
+              "title": "TP BDD"
             }
           }
         ]
@@ -201,10 +201,13 @@
   },
   "active": "7ca66821d3651397",
   "lastOpenFiles": [
+    "BASES DE DATOS/Untitled.base",
+    "BASES DE DATOS/TP BDD.md",
+    "BASES DE DATOS/Bases-de-Datos-Casos-de-Estudio-de-Modelado-de-Datos.pdf",
+    "IPOO/Clase 1.md",
     "Pasted image 20260829081958.png",
     "Pasted image 20260829081947.png",
     "REDES/TP 1.md",
-    "IPOO/Clase 1.md",
     "README.md",
     "Untitled/Untitled.md",
     "REDES",
