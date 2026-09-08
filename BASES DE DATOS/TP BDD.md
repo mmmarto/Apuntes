@@ -30,4 +30,25 @@ Empleados: legajo, nombre, apellido, tipo_documento, num_documento, CUIL, telefo
   D_tipo_documento = {DNI, PASAPORTE, LIBRETA CÍVICA, LIBRETA DE ENROLAMIENTO}
 
 
-Ciudad:  
+Ciudad:  nombre, codigo_postal
+
+| Atributo      | S/C | Mono/Poli | ID/Desc    | Oblig | Card | Tipo(SQL) | Dominio |
+| ------------- | --- | --------- | ---------- | ----- | ---- | --------- | ------- |
+| nombre        | S   | mono      | descriptor | Si    | 1..1 | VARCHAR   |         |
+| codigo_postal | S   | mono      | ID         | Si    | 1..1 | VARCHAR   |         |
+
+Veterinario: matricula, , años
+
+| Atributo  | S/C | Mono/Poli | ID/Desc    | Oblig | Card | Tipo(SQL) | Dominio |
+| --------- | --- | --------- | ---------- | ----- | ---- | --------- | ------- |
+| matricula | S   | MONO      | ID         | SI    | 1..1 | VARCHAR   |         |
+| años      | S   | MONO      | DESCRIPTOR | SI    | 1..1 | INT       |         |
+
+Especialidades: nombre, codigo
+
+| Atributo | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
+| -------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
+| nombre   | S   | MONO      | ID(alt) | SI    | 1..1 | VARCHAR   |         |
+| codigo   | S   | MONO      | ID      | SI    | 1..1 | VARCHAR   |         |
+
+
