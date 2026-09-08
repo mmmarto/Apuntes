@@ -11,14 +11,17 @@
             "id": "7ca66821d3651397",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "BASES DE DATOS/TP BDD.md",
-                "mode": "source",
-                "source": false
+                "file": "Untitled 1.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "TP BDD"
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled 1"
             }
           }
         ]
@@ -185,7 +188,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,9 +204,11 @@
   },
   "active": "7ca66821d3651397",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "Untitled 1.canvas",
     "BASES DE DATOS/Introduccion_a_las_Bases_de_Datos_Rodolf.pdf",
-    "BASES DE DATOS/Bases-de-Datos-Casos-de-Estudio-de-Modelado-de-Datos.pdf",
     "BASES DE DATOS/TP BDD.md",
+    "BASES DE DATOS/Bases-de-Datos-Casos-de-Estudio-de-Modelado-de-Datos.pdf",
     "Untitled.base",
     "BASES DE DATOS/Introduccion_a_las_Bases_de_Datos_Rodolf.pdf.crdownload",
     "BASES DE DATOS/Trabajo Práctico 1.pdf",
