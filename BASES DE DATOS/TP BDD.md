@@ -30,4 +30,4 @@ Empleados: legajo, nombre, apellido, tipo_documento, num_documento, CUIL, telefo
   D_tipo_documento = {DNI, PASAPORTE, LIBRETA CÍVICA, LIBRETA DE ENROLAMIENTO}
 
 
-	Ciudad:   
+Ciudad:  
