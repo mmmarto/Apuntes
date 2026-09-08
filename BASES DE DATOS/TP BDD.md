@@ -23,5 +23,11 @@ Empleados: legajo, nombre, apellido, tipo_documento, num_documento, CUIL, telefo
 | fecha_nacimiento | S   | mono      | descriptor | Si    | 1..1 | DATE      |                  |
 | fecha_inicio     | S   | mono      | descriptor | Si    | 1..1 | DATE      |                  |
 | fecha_baja       | S   | mono      | descriptor | No    | 0..1 | DATE      |                  |
+|                  |     |           |            |       |      |           |                  |
+ 
+  
   Dominio: 
   D_tipo_documento = {DNI, PASAPORTE, LIBRETA CÍVICA, LIBRETA DE ENROLAMIENTO}
+
+
+	Ciudad:   
