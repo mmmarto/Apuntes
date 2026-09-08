@@ -85,14 +85,23 @@ REQUISITO 8 NO VA EN ESTA PARTE
 9- ESPECIES ANIMALES: codigo, descripcion, caracteristicas, cantidad_animales, nombre_vulgar, nombre_cientifico, peligro_de_extincion, grupo
 
 
-| Atributo          | S/C | Mono/Poli | ID/Desc    | Oblig | Card | Tipo(SQL) | Dominio |
-| ----------------- | --- | --------- | ---------- | ----- | ---- | --------- | ------- |
-| codigo            | S   | MONO      | ID         | SI    | 1..1 | VARCHAR   |         |
-| descripcion       | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |         |
-| caracteristicas   | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |         |
-| cantidad_animales | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |         |
-| nombre_vulgar     | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |         |
-|                   |     |           |            |       |      |           |         |
+| Atributo             | S/C | Mono/Poli | ID/Desc    | Oblig | Card | Tipo(SQL) | Dominio                |
+| -------------------- | --- | --------- | ---------- | ----- | ---- | --------- | ---------------------- |
+| codigo               | S   | MONO      | ID         | SI    | 1..1 | VARCHAR   |                        |
+| descripcion          | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |                        |
+| caracteristicas      | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |                        |
+| cantidad_animales    | S   | MONO      | DESCRIPTOR | SI    | 1..1 | INT       |                        |
+| nombre_vulgar        | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |                        |
+| nombre_cientifico    | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |                        |
+| peligro_de_extincion | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   | D_peligro_de_extincion |
+| grupo                | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   | D_grupo                |
+
+D_peligro_de_extincion = {Rojo, Amarillo, Verde}
+D_grupo = {Mamíferos, Aves, Reptiles, Peces, Insectos, Arañas o Alacranes.}
+
+
+10- ANIMALES: codigo, peso color, sexo
+
 
 
 
