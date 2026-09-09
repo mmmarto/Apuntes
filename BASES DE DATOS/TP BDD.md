@@ -103,6 +103,64 @@ D_grupo = {Mamíferos, Aves, Reptiles, Peces, Insectos, Arañas o Alacranes.}
 10- ANIMALES: codigo, peso color, sexo
 
 
+| Atributo | S/C | Mono/Poli | ID/Desc    | Oblig | Card | Tipo(SQL) | Dominio |
+| -------- | --- | --------- | ---------- | ----- | ---- | --------- | ------- |
+| codigo   | S   | MONO      | ID         | SI    | 1..1 | VARCHAR   |         |
+| peso     | S   | MONO      | DESCRIPTOR | SI    | 1..1 | INT       |         |
+| color    | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |         |
+| sexo     | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   | D_sexo  |
+
+D_sexo = {masculino, femenino, hermafroditismo, determinado ambientalmente, sexualidad diversa}
+
+	REQUISITO 14 PARTE B
 
 
+11- PARQUES: nombre, codigo, coordenada_geografica(latitud, longitud)
 
+| Atributo              | S/C | Mono/Poli | ID/Desc    | Oblig | Card | Tipo(SQL) | Dominio |
+| --------------------- | --- | --------- | ---------- | ----- | ---- | --------- | ------- |
+| nombre                | S   | MONO      | ID(alt)    | SI    | 1..1 | VARCHAR   |         |
+| codigo                | S   | MONO      | ID         | SI    | 1..1 | VARCHAR   |         |
+| coordenada_geografica | C   | MONO      | DESCRIPTOR | SI    | 1..1 |           |         |
+| -longitud             | S   | MONO      | DESCRIPTOR | SI    | 1..1 | FLOAT     |         |
+| -latitud              | S   | MONO      | DESCRIPTOR | SI    | 1..1 | FLOAT     |         |
+
+
+12-HORARIOS: dia, hora_apertura, hora_cierre
+
+| Atributo      | S/C | Mono/Poli | ID/Desc    | Oblig | Card | Tipo(SQL) | Dominio |
+| ------------- | --- | --------- | ---------- | ----- | ---- | --------- | ------- |
+| dia           | S   | MONO      | ID         | SI    | 1..1 | VARCHAR   | D_dia   |
+| hora_apertura | S   | MONO      | DESCRIPTOR | SI    | 1..1 | TIME      |         |
+| hora_cierre   | S   | MONO      | DESCRIPTOR | SI    | 1..1 | TIME      |         |
+
+D_dia = {Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo}
+
+13- HABITATS: codigo, nombre, coordenada(latitud, longitud), tipo, clima, vegetacion, extension
+
+| Atributo   | S/C | Mono/Poli | ID/Desc    | Oblig | Card | Tipo(SQL) | Dominio      |
+| ---------- | --- | --------- | ---------- | ----- | ---- | --------- | ------------ |
+| codigo     | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |              |
+| nombre     | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |              |
+| coordenada | C   | MONO      | DESCRIPTOR | SI    | 1..1 |           |              |
+| -latitud   | S   | MONO      | DESCRIPTOR | SI    | 1..1 | FLOAT     |              |
+| -longitud  | S   | MONO      | DESCRIPTOR | SI    | 1..1 | FLOAT     |              |
+| tipo       | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   | D_tipo       |
+| clima      | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   | D_clima      |
+| vegetacion | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   | D_vegetacion |
+| extension  | S   | MONO      | DESCRIPTOR | SI    | 1..1 | FLOAT     |              |
+
+D_tipo = {Aviario, Acuario, Delfinario, Terrario}
+D_clima = {Tropical, Seco, Templado, Continental, Polar}
+D_vegetacion= {Pantano, Lago, Rio, Mar, Tundra, Taiga, Selva, Bosque, Desierto, Sabana}
+
+14- TRATAMIENTO: numero, diagnostico, descripcion(medicamentos, alimentacion), sugerencia, fecha, hora
+
+| Atributo    | S/C | Mono/Poli | ID/Desc    | Oblig | Card | Tipo(SQL) | Dominio |
+| ----------- | --- | --------- | ---------- | ----- | ---- | --------- | ------- |
+| numero      | S   | MONO      | ID         | SI    | 1..1 | VARCHAR   |         |
+| diagnostico | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |         |
+| descripcion | S   | MONO      | DESCRIPTOR | SI    | 1..1 | VARCHAR   |         |
+| sugerencia  | S   | MONO      | DESCRIPTOR | NO    | 0..1 | VARCHAR   |         |
+| fecha       | S   | MONO      | DESCRIPTOR | SI    | 1..1 | DATE      |         |
+| hora        | S   | MONO      | DESCRIPTOR | SI    | 1..1 | TIME      |         |
