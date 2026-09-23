@@ -84,9 +84,50 @@ D_tipo_documento: {DNI, PASAPORTE, LIBRETA CÍVICA, LIBRETA DE ENROLAMIENTO}
 | codigoID      | S   | M         | ID      | SI    |      | VARCHAR   |                  |
 D_tipo_documento: {DNI, PASAPORTE, LIBRETA CÍVICA, LIBRETA DE ENROLAMIENTO}
 
-7. VENTAS: factura(cliente, empleado, numFactura, fecha, tipoPago, montoTotal)
+7. factura:(numFactura, fecha, tipoPago, montoTotal)
+
+| Atributo   | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio    |
+| ---------- | --- | --------- | ------- | ----- | ---- | --------- | ---------- |
+| numFactura | C   | M         | ID EXT  | SI    |      | VARCHAR   |            |
+| fecha      | S   | M         | D       | SI    |      | Date      |            |
+| tipoPago   | S   | M         | D       | SI    |      | VARCHAR   | t_tipoPago |
+| montoTotal | S   | M         | D       | SI    |      | DOUBLE    |            |
+t_tipoPago: {efectivo, transferencia, tarjeta de crédito o cuenta corriente}
+
+
+
+8. Lineas:  numero, producto, cantidadVendida, precioUnitario, subtotal
+
+| Atributo        | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
+| --------------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
+| numero          | S   | M         | ID ext  | SI    |      | VARCHAR   |         |
+| cantidadVendida | S   | M         | DESC    | SI    |      | INT       |         |
+| precioUnitario  | S   | M         | DESC    | SI    |      | DOUBLE    |         |
+| subtotal        | S   | M         | DESC    | SI    |      | DOUBLE    |         |
+
+
+9. Proveedores: codigoID, nombre, CUIT, email, telefono
 
 | Atributo | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
 | -------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
-| factura  | C   | M         | D       | SI    |      |           |         |
-|          |     |           |         |       |      |           |         |
+| codigoID | S   | M         | ID      | SI    |      | VARCHAR   |         |
+| nombre   | S   | M         | DESC    | SI    |      | VARCHAR   |         |
+| CUIT     | S   | M         | DESC    | SI    |      | VARCHAR   |         |
+| email    | S   | M         | ID      | SI    |      | VARCHAR   |         |
+| telefono | S   | M         | DESC    | SI    |      | VARCHAR   |         |
+
+
+10. Compras: fecha, cantidad, precioCosto
+
+| Atributo    | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
+| ----------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
+| fecha       | S   | M         | DESC    | SI    |      | DATE      |         |
+| cantidad    | S   | M         | DESC    | SI    |      | INT       |         |
+| precioCosto | S   | M         | DESC    | SI    |      | DOUBLE    |         |
+
+11. Promociones: fecha, descuento
+
+| Atributo  | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
+| --------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
+| fecha     | S   | M         | DESC    | SI    |      | DATE      |         |
+| descuento | S   | M         | DESC    | SI    |      | VARCHAR   |         |
