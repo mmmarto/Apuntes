@@ -83,3 +83,10 @@ D_tipo_documento: {DNI, PASAPORTE, LIBRETA CÍVICA, LIBRETA DE ENROLAMIENTO}
 | celular       | S   | M         | D       | SI    |      | VARCHAR   |                  |
 | codigoID      | S   | M         | ID      | SI    |      | VARCHAR   |                  |
 D_tipo_documento: {DNI, PASAPORTE, LIBRETA CÍVICA, LIBRETA DE ENROLAMIENTO}
+
+7. VENTAS: factura(cliente, empleado, numFactura, fecha, tipoPago, montoTotal)
+
+| Atributo | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
+| -------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
+| factura  | C   | M         | D       | SI    |      |           |         |
+|          |     |           |         |       |      |           |         |
