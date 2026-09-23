@@ -137,6 +137,7 @@ D_sexo = {masculino, femenino, hermafroditismo, determinado ambientalmente, sexu
 D_dia = {Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo}
 
 13- HABITATS: codigo, nombre, coordenada(latitud, longitud), tipo, clima, vegetacion, extension
+ID EXTERNAGHGKHG
 
 | Atributo   | S/C | Mono/Poli | ID/Desc    | Oblig | Card | Tipo(SQL) | Dominio      |
 | ---------- | --- | --------- | ---------- | ----- | ---- | --------- | ------------ |
