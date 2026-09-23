@@ -1,5 +1,5 @@
 
-1. Sucursales: codigo(SUC, codigoPostal, numSucursal), fechaDeCreacion, direccion(calle, numero), email, usuarioIG, telefonosFijo, telCel
+	1. Sucursales: codigo(SUC, codigoPostal, numSucursal), fechaDeCreacion, direccion(calle, numero), email, usuarioIG, telefonosFijo, telCel
 
 | Atributo        | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
 | --------------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
@@ -121,13 +121,16 @@ t_tipoPago: {efectivo, transferencia, tarjeta de crédito o cuenta corriente}
 
 | Atributo    | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
 | ----------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
-| fecha       | S   | M         | DESC    | SI    |      | DATE      |         |
+| fecha       | S   | M         | ID EXT  | SI    |      | DATE      |         |
 | cantidad    | S   | M         | DESC    | SI    |      | INT       |         |
 | precioCosto | S   | M         | DESC    | SI    |      | DOUBLE    |         |
+ID EXTERNOS:  producto/proovedor
 
-11. Promociones: fecha, descuento
 
-| Atributo  | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
-| --------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
-| fecha     | S   | M         | DESC    | SI    |      | DATE      |         |
-| descuento | S   | M         | DESC    | SI    |      | VARCHAR   |         |
+11. Promociones: IDpromocion, fecha, descuento
+
+| Atributo    | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
+| ----------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
+| IDpromocion | S   | M         | ID      | SI    |      | VARCHAR   |         |
+| fecha       | S   | M         | DESC    | SI    |      | DATE      |         |
+| descuento   | S   | M         | DESC    | SI    |      | INT       |         |
