@@ -15,3 +15,17 @@
 | usuarioIG       | S   | M         | ID      | SI    |      | VARCHAR   |         |
 | telefonosFijo   | S   | P         | DESC    | SI    | 1..N | VARCHAR   |         |
 | telCel          | S   | M         | DESC    | SI    |      | VARCHAR   |         |
+
+
+2. Ciudades: nombre, codigoPostal
+
+| Atributo     | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
+| ------------ | --- | --------- | ------- | ----- | ---- | --------- | ------- |
+| nombre       | S   | M         | Desc    | SI    |      | VARCHAR   |         |
+| codigoPostal | S   | M         | ID      | SI    |      | VARCHAR   |         |
+
+
+3. Provincias: codigo, nombre
+
+| Atributo        | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
+| --------------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
