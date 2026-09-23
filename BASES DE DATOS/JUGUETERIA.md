@@ -40,3 +40,46 @@
 | codigoBarra | S   | M         | ID      | SI    |      | VARCHAR   |         |
 | descripcion | S   | M         | D       | SI    |      | VARCHAR   |         |
 | precioUni   | S   | M         | D       | SI    |      | DOUBLE    |         |
+
+5. Empleados: legajo, CUIL, tipoDocumento, numDoc, nombre, apellido, direccion(calle, numero, depto, piso), email(unico), fechaInicio, fechaNacimiento, celular, codigoID, fechaFin
+
+| Atributo        | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio          |
+| --------------- | --- | --------- | ------- | ----- | ---- | --------- | ---------------- |
+| legajo          | S   | M         | ID      | SI    |      | VARCHAR   |                  |
+| CUIL            | S   | M         | ID      | SI    |      | VARCHAR   |                  |
+| tipoDocumento   | S   | M         | D       | SI    |      | VARCHAR   | D_tipo_documento |
+| numDoc          | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| nombre          | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| apellido        | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| direccion       | C   | M         | D       | SI    |      |           |                  |
+| -calle          | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| -numero         | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| -depto          | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| -piso           | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| email           | S   | M         | ID      | SI    |      | VARCHAR   |                  |
+| fechaInicio     | S   | M         | D       | SI    |      | Date      |                  |
+| fechaNacimiento | S   | M         | D       | Si    |      | Date      |                  |
+| celular         | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| codigoID        | S   | M         | ID      | SI    |      | VARCHAR   |                  |
+| fechaFin        | S   | M         | D       | no    | 0..1 | Date      |                  |
+D_tipo_documento: {DNI, PASAPORTE, LIBRETA CÍVICA, LIBRETA DE ENROLAMIENTO}
+
+6. Cliente: tipoDoc, numDoc, nombre, apellido, fechaInicio, direccion(calle, numero, depto, piso), email, fechaCumple, celular, codigoID
+
+| Atributo      | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio          |
+| ------------- | --- | --------- | ------- | ----- | ---- | --------- | ---------------- |
+| tipoDocumento | S   | M         | D       | SI    |      | VARCHAR   | D_tipo_documento |
+| numDoc        | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| nombre        | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| apellido      | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| fechaInicio   | S   | M         | D       | SI    |      | Date      |                  |
+| direccion     | C   | M         | D       | SI    |      |           |                  |
+| -calle        | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| -numero       | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| -depto        | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| -piso         | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| email         | S   | M         | ID      | SI    |      | VARCHAR   |                  |
+| fechaCumple   | S   | M         | D       | Si    |      | Date      |                  |
+| celular       | S   | M         | D       | SI    |      | VARCHAR   |                  |
+| codigoID      | S   | M         | ID      | SI    |      | VARCHAR   |                  |
+D_tipo_documento: {DNI, PASAPORTE, LIBRETA CÍVICA, LIBRETA DE ENROLAMIENTO}
