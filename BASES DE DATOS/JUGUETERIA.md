@@ -27,5 +27,16 @@
 
 3. Provincias: codigo, nombre
 
-| Atributo        | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
-| --------------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
+| Atributo | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
+| -------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
+| codigo   | S   | M         | ID      | SI    |      | VARCHAR   |         |
+| nombre   | S   | M         | ID      | SI    |      | VARCHAR   |         |
+
+
+4. Productos: codigoBarra, descripcion, precioUni
+
+| Atributo    | S/C | Mono/Poli | ID/Desc | Oblig | Card | Tipo(SQL) | Dominio |
+| ----------- | --- | --------- | ------- | ----- | ---- | --------- | ------- |
+| codigoBarra | S   | M         | ID      | SI    |      | VARCHAR   |         |
+| descripcion | S   | M         | D       | SI    |      | VARCHAR   |         |
+| precioUni   | S   | M         | D       | SI    |      | DOUBLE    |         |
